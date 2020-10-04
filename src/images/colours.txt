@@ -1,0 +1,4 @@
+Background: #F1F0EA
+Card: #E0DDCF
+Acent (Forest-Green): #3E885B
+
