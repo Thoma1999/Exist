@@ -1,0 +1,158 @@
+.container#content {
+  margin-top: 10px;
+  background-color: #F1F0EA !important;
+}
+body {
+  background-color: $light-gray;
+  font-family: $site-font;
+}
+
+.hero{
+  background-image: url("../../content/assets/backgroundx.jpeg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: cover;
+  font-family: Roboto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.hero .content{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+  padding: 30px 30px;
+  padding-bottom: 30px;
+}
+
+.hero .content img{
+  margin-bottom: 20px;
+}
+
+#pageNav{
+  background-color: black;
+  opacity: 80%;
+  // border-right: 1px solid rgba(0, 0, 0, 0.4);
+  // border-left: 1px solid rgba(0, 0, 0, 0.4);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 0;
+}
+
+#pageNav .navbar-nav .nav-link {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 5px;
+  // margin-top: 2px;
+  &:hover {
+    color: #03570a;
+  }
+}
+
+#catNav .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.1em !important;
+  font-weight: 400 !important;
+  // margin-top: 2px;
+  &:hover {
+    color: #03570a;
+  }
+}
+.navbar-nav .nav-item{
+  margin: 0;
+}
+
+#catNav .navbar-nav{
+  justify-content: center;
+  width: 90%;
+}
+
+#catNav{
+  background-color: #E0DDCF;
+  line-height: 0;
+}
+
+
+#catNav .nav-item{
+  margin: 5px 10px;
+}
+
+#catNav .nav{
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tag{
+  background-color: #3E885B;
+  font-weight: 400;
+  width: 170px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.content h2{
+  color: #fff;
+  margin: auto;
+  font-size: 0.5em;
+  font-weight: 200;
+}
+.content img{
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+#hamburger{
+  border: none;
+}
+
+.navbar-toggler-icon{
+  width: 25px;
+  height: 25px;
+}
+
+#searchForm{
+  margin: 0;
+  margin-right: 2%;
+  display: flex;
+}
+form{
+  margin: 0px;
+}
+.searchBox{
+  height: 28px;
+  font-size: 15px;
+  width: 0px;
+  transition: width 0.1s ease-in;
+  padding: 0 0;
+  margin: 0px;
+  border: 0px;
+}
+
+.searchBox.active{
+  width: 200px;
+  padding: 6.75px 13.5px;
+  border: 2px;
+}
+
+.searchIcon{
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #searchForm{
+    display: none;
+  }
+  .mr-auto{
+    margin: auto;
+  }
+  #pageNav .navbar-nav .nav-link {
+    margin: 0 10px;
+  }
+}

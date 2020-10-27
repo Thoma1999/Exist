@@ -1,16 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TagPreview from "../components/tagWidget/TagPreview"
+
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
-  const tags =post.frontmatter.tags || []
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -31,10 +29,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <TagPreview value={tags}/>
         <hr />
         <footer>
-          <Bio />
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -84,7 +80,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        tags
       }
     }
   }

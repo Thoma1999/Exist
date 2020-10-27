@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
@@ -73,7 +74,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/Logo.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
