@@ -1,6 +1,6 @@
 import React from "react"
 import {graphql, StaticQuery } from "gatsby"
-import Cardrm from "../components/cardrm"
+import Blogpost from "../components/Blogpost"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Col, Row} from 'reactstrap';
@@ -25,7 +25,7 @@ const IndexPage = () => {
           return (
             <div>
               {posts.map(({node}) =>(
-                <Cardrm 
+                <Blogpost 
                   title={node.frontmatter.title}
                   description={node.frontmatter.description}
                   date={node.frontmatter.date}

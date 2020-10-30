@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import "../styles/index.scss"
+import { Container } from "reactstrap"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,10 +27,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <Container>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="container" id="content">
         {children}
       </div>
+    </Container>
+    <footer>
+      © {new Date().getFullYear()} Exist News
+    </footer>
     </>
   )
 }

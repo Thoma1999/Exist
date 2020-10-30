@@ -7,6 +7,12 @@ body {
   font-family: $site-font;
 }
 
+footer{
+  color: white;
+  background-color: green;
+  text-align: center;
+}
+
 .hero{
   background-image: url("../../content/assets/backgroundx.jpeg");
   background-repeat: no-repeat;
@@ -21,8 +27,7 @@ body {
   font-weight: 400;
   font-size: 3em;
   text-align: center;
-  padding: 30px 30px;
-  padding-bottom: 30px;
+  padding: 15px 30px;
 }
 
 .hero .content img{
@@ -35,10 +40,11 @@ body {
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
   // border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  line-height: 0;
+  line-height: 0.5;
 }
 
 #pageNav .navbar-nav .nav-link {
+  text-align: center;
   font-size: 1.2em;
   font-weight: 300;
   color: #ffffff;
@@ -149,10 +155,14 @@ form{
   #searchForm{
     display: none;
   }
+  .hero .content h2{
+    font-size: 0.4em;
+  }
+  .hero .content img{
+    margin-bottom: 0px;
+    width: 150px;
+  }
   .mr-auto{
     margin: auto;
-  }
-  #pageNav .navbar-nav .nav-link {
-    margin: 0 10px;
   }
 }

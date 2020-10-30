@@ -1,8 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import Img from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import '../styles/post.scss';
+import {Col, Row} from 'reactstrap';
 
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -16,6 +18,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Row id="postMainR">
+      <Col md={8}>
       <article
         className="blog-post"
         itemScope
@@ -23,7 +27,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
+          <p>Posted on {post.frontmatter.date}</p>
+          <p>By {post.frontmatter.author}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -33,6 +39,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <footer>
         </footer>
       </article>
+      </Col>
+      <Col md={4}>
+        <div>
+        Sidebar here
+        </div>
+      </Col>
+      </Row>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -77,9 +90,17 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
-        title
         date(formatString: "MMMM DD, YYYY")
+        title
         description
+        author
+        featuredImage{
+          childImageSharp{
+            fluid(maxWidth: 600){
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

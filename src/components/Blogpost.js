@@ -3,24 +3,24 @@ import {
   Card, CardText, CardBody,
   CardTitle, CardSubtitle
 } from 'reactstrap';
-import {Link} from "gatsby";
 import Img from 'gatsby-image'
+import {Link} from 'gatsby'
 
-const Cardrm = ({title, description, date, slug, fluid, author, body}) => {
+const Blogpost = ({title, description, date, slug, fluid, author, body}) => {
   return (
     <div>
       <Card>
-        <Img fluid={fluid} alt="Card image cap" />
+        <Link to={slug}><Img fluid={fluid} alt="Card image cap" /></Link>
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>Category</CardSubtitle>
           <CardText>By {author} on {date}</CardText>
           <CardText>{description}</CardText>
-          <Link to={slug}>READ MORE</Link>
+          <a href={slug} class="button">READ MORE</a>
         </CardBody>
       </Card>
     </div>
   );
 };
 
-export default Cardrm;
+export default Blogpost;
