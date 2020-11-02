@@ -16,21 +16,17 @@ const IndexPage = () => {
     <SEO title="Home" />
     <StaticQuery
         query={indexQuery}
-        render ={data => 
-          <Gallery data={data}/>
-        }  
-      />  
-    <Row>
-    <Col md={8}>
-    <StaticQuery
-        query={indexQuery}
         render ={data => {
           numberofPages = Math.ceil(data.allMarkdownRemark.totalCount/postsperPage)
           const posts = data.allMarkdownRemark.edges.slice(3);
           return (
+            <Row>
+            <Gallery data={data}/>
+            <Col md={8}>
             <div>
               {posts.map(({node}) =>(
                 <Blogpost 
+                  key = {node.id}
                   title={node.frontmatter.title}
                   description={node.frontmatter.description}
                   date={node.frontmatter.date}
@@ -40,16 +36,13 @@ const IndexPage = () => {
                   body={node.excerpt}
                 />
               ))}
-            <PaginationLinks numPages={numberofPages} currentPage={1}></PaginationLinks>
             </div>
+            <PaginationLinks numPages={numberofPages} currentPage={1}></PaginationLinks>
+            </Col>
+          </Row>
           )
         }}
       />  
-    </Col>
-    <Col md={4}>
-      Sidebar here
-    </Col>
-    </Row>
   </Layout>
   )
 }

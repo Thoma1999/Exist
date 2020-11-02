@@ -11,11 +11,11 @@ const BlogCardTemplate = (props) => {
   const { currentPage, numPages } = props.pageContext
   return (
     <Layout pageTitle={`page: ${currentPage}`}>
-    {/* {currentPage===1 && <Gallery data={props.data}/>} */}
     <Row>
         <Col md={8}>
             {posts.map(({node}) =>(
-                <Blogpost 
+                <Blogpost
+                    key = {node.id}
                     title={node.frontmatter.title}
                     description={node.frontmatter.description}
                     date={node.frontmatter.date}
@@ -25,9 +25,9 @@ const BlogCardTemplate = (props) => {
                     body={node.excerpt}
                 />
                 ))}
+      <PaginationLinks numPages={numPages} currentPage={currentPage}></PaginationLinks>         
         </Col>
       </Row>
-      <PaginationLinks numPages={numPages} currentPage={currentPage}></PaginationLinks>
     </Layout>
   );
 };

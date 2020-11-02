@@ -16,7 +16,7 @@ const Blogpost = ({title, description, date, slug, fluid, author, body}) => {
           <CardSubtitle>Category</CardSubtitle>
           <CardText>By {author} on {date}</CardText>
           <CardText>{description}</CardText>
-          <a href={slug} class="button">READ MORE</a>
+          <a href={slug} className="button">READ MORE</a>
         </CardBody>
       </Card>
     </div>
