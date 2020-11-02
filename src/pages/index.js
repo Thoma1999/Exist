@@ -5,8 +5,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Col, Row} from 'reactstrap';
 import Gallery from "../components/gallery"
+import PaginationLinks from '../components/PaginationLinks'
+
 
 const IndexPage = () => {
+  const postsperPage = 5
+  let numberofPages
   return (
     <Layout>
     <SEO title="Home" />
@@ -21,6 +25,7 @@ const IndexPage = () => {
     <StaticQuery
         query={indexQuery}
         render ={data => {
+          numberofPages = Math.ceil(data.allMarkdownRemark.totalCount/postsperPage)
           const posts = data.allMarkdownRemark.edges.slice(3);
           return (
             <div>
@@ -35,6 +40,7 @@ const IndexPage = () => {
                   body={node.excerpt}
                 />
               ))}
+            <PaginationLinks numPages={numberofPages} currentPage={1}></PaginationLinks>
             </div>
           )
         }}
@@ -52,7 +58,11 @@ export default IndexPage
 
 export const indexQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { 
+        fields: [frontmatter___date], order: DESC }
+        limit: 5              
+        ) {
+      totalCount
       edges {
         node {
           id

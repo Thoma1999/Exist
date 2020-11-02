@@ -1,0 +1,8 @@
+.pagination{
+    justify-content: center;
+    margin: auto;
+}
+.page-item.active .page-link{
+    background-color: green;
+    border: green;
+}
