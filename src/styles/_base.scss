@@ -2,6 +2,14 @@
   margin-top: 10px;
   background-color: #F1F0EA !important;
 }
+#content .row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.col-md-8{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 body {
   background-color: $light-gray;
   font-family: $site-font;
@@ -36,7 +44,6 @@ footer{
 
 #pageNav{
   background-color: black;
-  opacity: 80% !important;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
   // border-bottom: 1px solid rgba(0, 0, 0, 0.4);
