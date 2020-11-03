@@ -26,6 +26,7 @@
 .smallHeadlineR{
     margin: 0;
     height: 50%;
+    max-height: 300px;
 }
 .smallHeadlineR a{
     overflow: hidden;
@@ -38,6 +39,7 @@
 
 .largeHeadlineR { 
    margin: 0;
+   max-height: 600px;
 }
 .largeHeadlineR a{
     overflow: hidden;
