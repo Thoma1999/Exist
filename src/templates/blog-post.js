@@ -28,8 +28,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
-          <p>Posted on {post.frontmatter.date}</p>
-          <p>By {post.frontmatter.author}</p>
+          <div id="postDetails">
+          <img src='/blank.png'/>
+          <div id="postDate">
+            <p>Posted on {post.frontmatter.date}</p>
+            <p>By {post.frontmatter.author}</p>    
+          </div>
+          </div>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
