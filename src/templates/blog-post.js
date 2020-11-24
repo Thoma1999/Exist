@@ -51,13 +51,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <footer>
         </footer>
       </article>
-      </Col>
-      <Col md={4}>
-        <div>
-        Sidebar here
-        </div>
-      </Col>
-      </Row>
+      <div id="shareBar">
+          share bar here
+      </div>
+      <div id="comments">
+          comment secction here
+      </div>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -71,19 +70,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                ← Previous
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                Next →
               </Link>
             )}
           </li>
         </ul>
       </nav>
+      </Col>
+      <Col md={4}>
+        <div>
+        Sidebar here
+        </div>
+      </Col>
+      </Row>
     </Layout>
   )
 }
