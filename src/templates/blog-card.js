@@ -52,7 +52,7 @@ query blogListQuery($skip: Int!, $limit: Int!) {
           tags
           featuredImage{
             childImageSharp{
-              fluid(maxWidth: 600){
+              fluid(maxWidth: 400, maxHeight: 300, cropFocus: CENTER, quality: 80, fit: COVER){
                 ...GatsbyImageSharpFluid
               }
             }

@@ -13,12 +13,13 @@ const Blogpost = ({title, description, date, slug, fluid, author, tags, body}) =
         <Link to={slug}><Img fluid={fluid} alt="Card image cap" /></Link>
         <CardBody>
           <CardTitle>{title}</CardTitle>
-          <CardSubtitle>{tags.map((tag, i) => [
-  <strong key={i}>
-    {tag}
-    {i < tags.length - 1 ? ', ' : ''}
-  </strong>
-])}</CardSubtitle>
+          <CardSubtitle className="tags">
+                {tags.map((tag, i) => [
+                <h6 key={i}>
+                  {tag}
+                </h6>
+                ])}
+          </CardSubtitle>
           <CardText>By {author} on {date}</CardText>
           <CardText>{description}</CardText>
           <a href={slug} className="button">READ MORE</a>

@@ -76,12 +76,12 @@
 
 .largeHeadlineR .headlineDetails .tag{
     padding: 6px 40px;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 .smallHeadlineR .headlineDetails .tag{
     padding: 5px 30px;
-    font-size: 0.8em;
+    font-size: 1.1em;
 }
 
 .largeHeadlineR .headlineDetails h3{
@@ -99,6 +99,10 @@
         max-height: none;
     }
     .smallHeadlineR .headlineDetails .tag{
+        padding: 6px 40px;
+        font-size: 1em;
+    }
+    .largeHeadlineR .headlineDetails .tag{
         padding: 6px 40px;
         font-size: 1em;
     }

@@ -27,6 +27,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <div className="tags">
+                {post.frontmatter.tags.map((tag, i) => [
+                <h6 key={i}>
+                  {tag}
+                </h6>
+                ])}
+          </div>
           <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
           <div id="postDetails">
           <img src='/blank.png'/>
@@ -102,7 +109,7 @@ export const pageQuery = graphql`
         tags
         featuredImage{
           childImageSharp{
-            fluid(maxWidth: 600){
+            fluid(maxWidth: 400, maxHeight: 300, cropFocus: CENTER, quality: 80, fit: COVER){
               ...GatsbyImageSharpFluid
             }
           }
