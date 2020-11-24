@@ -17,7 +17,12 @@ const Gallery = ({data}) => {
             <Img fluid={postArray[0].node.frontmatter.featuredImage.childImageSharp.fluid}/>
             <div className="headlineDetails">
               <h3>{postArray[0].node.frontmatter.title}</h3>
-              <span className="tag">Technology</span>
+              <span className="tag">{postArray[0].node.frontmatter.tags.map((tag, i) => [
+  <strong key={i}>
+    {tag}
+    {i < postArray[0].node.frontmatter.length - 1 ? ', ' : ''}
+  </strong>
+])}</span>
             </div>
           </Link>
         </Row>
@@ -28,7 +33,12 @@ const Gallery = ({data}) => {
             <Img fluid={postArray[1].node.frontmatter.featuredImage.childImageSharp.fluid}/>
             <div className="headlineDetails">
               <h3>{postArray[1].node.frontmatter.title}</h3>
-              <span className="tag">Technology</span>
+              <span className="tag">{postArray[1].node.frontmatter.tags.map((tag, i) => [
+  <strong key={i}>
+    {tag}
+    {i < postArray[1].node.frontmatter.length - 1 ? ', ' : ''}
+  </strong>
+])}</span>
             </div>
             </Link>
         </Row>
@@ -37,7 +47,12 @@ const Gallery = ({data}) => {
             <Img fluid={postArray[2].node.frontmatter.featuredImage.childImageSharp.fluid}/>
             <div className="headlineDetails">
               <h3>{postArray[2].node.frontmatter.title}</h3>
-              <span className="tag">Technology</span>
+              <span className="tag">{postArray[2].node.frontmatter.tags.map((tag, i) => [
+  <strong key={i}>
+    {tag}
+    {i < postArray[2].node.frontmatter.length - 1 ? ', ' : ''}
+  </strong>
+])}</span>
             </div>
           </Link>
         </Row>

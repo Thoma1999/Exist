@@ -21,6 +21,7 @@ const BlogCardTemplate = (props) => {
                     date={node.frontmatter.date}
                     slug={node.fields.slug}
                     author={node.frontmatter.author}
+                    tags={node.frontmatter.tags}
                     fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                     body={node.excerpt}
                 />
@@ -48,6 +49,7 @@ query blogListQuery($skip: Int!, $limit: Int!) {
           title
           description
           author
+          tags
           featuredImage{
             childImageSharp{
               fluid(maxWidth: 600){

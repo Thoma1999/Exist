@@ -32,6 +32,7 @@ const IndexPage = () => {
                   date={node.frontmatter.date}
                   slug={node.fields.slug}
                   author={node.frontmatter.author}
+                  tags = {node.frontmatter.tags}
                   fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                   body={node.excerpt}
                 />
@@ -64,6 +65,7 @@ export const indexQuery = graphql`
             title
             description
             author
+            tags
             featuredImage{
               childImageSharp{
                 fluid(maxWidth: 400, maxHeight: 300, cropFocus: CENTER, quality: 80, fit: COVER){
