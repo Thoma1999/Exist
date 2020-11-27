@@ -23,7 +23,7 @@ const IndexPage = () => {
             <Row>
             <Gallery data={data}/>
             <Col md={8}>
-            <div>
+            <div className="cardContainer">
               {posts.map(({node}) =>(
                 <Blogpost 
                   key = {node.id}

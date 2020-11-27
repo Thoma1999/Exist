@@ -13,6 +13,7 @@ const BlogCardTemplate = (props) => {
     <Layout pageTitle={`page: ${currentPage}`}>
     <Row>
         <Col md={8}>
+        <div className="cardContainer">
             {posts.map(({node}) =>(
                 <Blogpost
                     key = {node.id}
@@ -26,6 +27,7 @@ const BlogCardTemplate = (props) => {
                     body={node.excerpt}
                 />
                 ))}
+          </div>
       <PaginationLinks numPages={numPages} currentPage={currentPage}></PaginationLinks>         
         </Col>
       </Row>

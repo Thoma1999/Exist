@@ -10,7 +10,7 @@ const Gallery = ({data}) => {
   posts.map((node) =>{postArray.push(node)})
   return (
     <Container>
-    <Row id="galleryMainR">
+    <Row id="galleryMainR" className="cardContainer">
       <Col md={8}>
         <Row className="largeHeadlineR">
           <Link to={postArray[0].node.fields.slug}>

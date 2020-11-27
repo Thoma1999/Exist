@@ -8,7 +8,6 @@ html {
 }
 body {
   margin: auto !important;
-  padding: 0 5% !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
