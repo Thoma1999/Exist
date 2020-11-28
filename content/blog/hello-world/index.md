@@ -3,6 +3,7 @@ title: Hello World
 featuredImage: ../../assets/evo.jpg
 date: 2015-05-01T22:12:03.284Z
 author: Max
+authorImage: blank.png
 tags:
   - Tag1
   - Tag2
