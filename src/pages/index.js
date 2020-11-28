@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import {Col, Row} from 'reactstrap';
 import Gallery from "../components/gallery"
 import PaginationLinks from '../components/PaginationLinks'
+import Headline from "../components/Headline"
 
 
 const IndexPage = () => {
@@ -20,27 +21,10 @@ const IndexPage = () => {
           numberofPages = Math.ceil(data.allMarkdownRemark.totalCount/postsperPage)
           const posts = data.allMarkdownRemark.edges.slice(3);
           return (
-            <Row>
-            <Gallery data={data}/>
-            <Col md={8}>
-            <div className="cardContainer">
-              {posts.map(({node}) =>(
-                <Blogpost 
-                  key = {node.id}
-                  title={node.frontmatter.title}
-                  description={node.frontmatter.description}
-                  date={node.frontmatter.date}
-                  slug={node.fields.slug}
-                  author={node.frontmatter.author}
-                  tags = {node.frontmatter.tags}
-                  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-                  body={node.excerpt}
-                />
-              ))}
-            </div>
+            <div>
+            <Headline data={data}/>      
             <PaginationLinks numPages={numberofPages} currentPage={1}></PaginationLinks>
-            </Col>
-          </Row>
+            </div>
           )
         }}
       />  
@@ -68,7 +52,7 @@ export const indexQuery = graphql`
             tags
             featuredImage{
               childImageSharp{
-                fluid(maxWidth: 400, maxHeight: 300, cropFocus: CENTER, quality: 80, fit: COVER){
+                fluid(quality: 100, fit: COVER){
                   ...GatsbyImageSharpFluid
                 }
               }

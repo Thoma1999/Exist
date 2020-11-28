@@ -1,0 +1,38 @@
+.navbar{
+    background-color: black;
+}
+.nav-item{
+    margin-bottom: 0;
+}
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+    opacity: 80%;
+}
+
+.navbar-brand img{
+    margin-bottom: 0;
+    height: 25px;
+    line-height: 0;
+}
+
+.navbar button{
+    margin: 0 0;
+    padding: 0 0;
+    line-height: 0;
+    width: 50%;
+    border: none;
+}
+.toggler{
+    display: flex;
+    color: white;
+}
+
+.toggler a{
+    margin-right: 5px;
+}
+
+.navbar button:focus {outline:thin dotted !important;}

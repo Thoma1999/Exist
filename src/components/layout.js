@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import NavBar from "./NavBar"
 import "./layout.css"
 import "../styles/index.scss"
 import { Container } from "reactstrap"
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <>
     <Container>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="container" id="content">
         {children}
       </div>
