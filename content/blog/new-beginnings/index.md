@@ -3,6 +3,7 @@ title: New Beginnings
 featuredImage: ../../assets/evo.jpg
 date: 2015-05-28T22:40:32.169Z
 author: Max
+authorImage: blank.png
 tags:
   - Tag1
   - Tag2
