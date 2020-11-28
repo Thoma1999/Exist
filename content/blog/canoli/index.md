@@ -3,6 +3,7 @@ title: Canoli
 featuredImage: ../../assets/bruno.jpg
 date: 2020-10-03T18:59:51.623Z
 author: Max
+authorImage: blank.png
 tags:
   - Food
   - Cooking
