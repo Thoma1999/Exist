@@ -18,7 +18,6 @@ const Headline = ({data}) => {
         </div>
         <h2 id="headlineTitle">{postArray[0].node.frontmatter.title}</h2>
         <div className="HeadlineDetails">
-
             <div className="authorDate">
             </div>
         </div>
