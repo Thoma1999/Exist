@@ -3,6 +3,7 @@ title: Some food
 featuredImage: 20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg
 date: 2020-11-03T13:31:23.692Z
 author: Le chef
+authorImage: blank.png
 tags:
   - Food
   - Recipe
