@@ -7825,6 +7825,11 @@ gzip-size@3.0.0:
   dependencies:
     duplexer "^0.1.1"
 
+hamburger-react@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/hamburger-react/-/hamburger-react-2.3.0.tgz#4a083d1719f82d6a3b861c7190f59398d5e8bf2c"
+  integrity sha512-0JqyhuF+irS7Tqzw2JqZGg3bkTDoc4LAV9/ObqVLcogCC4UevzmiHbCaWgWKGDnbwsCKaZf4ekvTCmi1UUVeJA==
+
 handle-thing@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.1.tgz#857f79ce359580c340d43081cc648970d0bb234e"
@@ -12907,11 +12912,6 @@ react-codemirror2@^7.0.0:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/react-codemirror2/-/react-codemirror2-7.2.1.tgz#38dab492fcbe5fb8ebf5630e5bb7922db8d3a10c"
   integrity sha512-t7YFmz1AXdlImgHXA9Ja0T6AWuopilub24jRaQdPVbzUJVNKIYuy3uCFZYa7CE5S3UW6SrSa5nAqVQvtzRF9gw==
-
-react-css-burger@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-css-burger/-/react-css-burger-0.2.0.tgz#6b85f6855c1c0d9af136e7043d5c21f3de565874"
-  integrity sha512-q2ifct44rVXvLmVr1NeOcMsaeKQWGFaTaUCicF0ynekM8kK5ATpizV2PurgP1hnQntbWRVizCqmKE9JwoDmZNA==
 
 react-datetime@^2.16.3:
   version "2.16.3"

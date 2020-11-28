@@ -19,10 +19,10 @@
     line-height: 0;
 }
 
-.navbar button{
+.hamburger-react{
     margin: 0 0;
-    padding: 0 0;
-    line-height: 0;
+    padding: 0 0 !important;
+    line-height: 0 !important;
     width: 50%;
     border: none;
 }
@@ -32,7 +32,7 @@
 }
 
 .toggler a{
-    margin-right: 5px;
+    line-height: 2.5;
 }
 
-.navbar button:focus {outline:thin dotted !important;}
+.hamburger-react button:focus {outline:thin dotted !important;}

@@ -9,16 +9,15 @@ import {
 } from 'reactstrap';
 import '../styles/NavBar.css';
 import Brand from "../../content/assets/logo-main-white.png";
-import Logo from "../../content/assets/Logo.png"
-import Burger from 'react-css-burger';
+import Logo from "../../content/assets/Logo.png";
+import { Squash as Hamburger } from 'hamburger-react';
 
 const NavBar = (props) => {
-  const [isActive, setIsActive] = useState(false)
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
-    setIsActive(!isActive);
   };
 
   return (
@@ -30,14 +29,7 @@ const NavBar = (props) => {
         </NavbarBrand>
         <div className="toggler">
         <a>Menu</a>
-        <Burger
-          onClick={toggle}
-          active={isActive}
-          burger="collapse"
-          color="white"
-          hoverOpacity={0.8}
-          scale={0.75}
-        />
+        <Hamburger toggled={isOpen} toggle={setIsOpen} size={22}/>
         </div>
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
