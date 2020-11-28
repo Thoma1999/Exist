@@ -3,6 +3,7 @@ title: My Second Post!
 featuredImage: ../../assets/evo.jpg
 date: 2015-05-06T23:46:37.121Z
 author: Max
+authorImage: blank.png
 tags:
   - Tag1
   - Tag2
