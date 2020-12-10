@@ -34,5 +34,5 @@ collections:
         tagname: ''
       }
       - {label: "Tags", name: "tags", widget: "list"}
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string', pattern: ['^.{20,120}$', "Must have at least 20 characters and a maximum of 120"]}
       - { label: 'Body', name: 'body', widget: 'markdown' }

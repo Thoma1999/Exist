@@ -4,6 +4,7 @@
 
 .headlineTags h3{
     color: white;
+    font-weight: 600;
     background-color:#3E885B; 
     margin: 20px 10px;
     padding: 5px 10px;
@@ -12,10 +13,61 @@
 
 .headlineImage{
     width: 100%;
-    height: 70vh;
+    min-height: 55vh;
+    max-height: 70vh;
 }
 
 #headlineTitle{
-    color: white;
     margin-left: 10px;
+    font-weight: 600;
+}
+
+.black-overlay{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 55vh;
+    max-height: 70vh;
+    height: 100%;
+}
+.content-box{
+    color: white;
+    padding: 15px 15px;
+}
+
+.headlineDetails {
+    display: flex;
+    margin: 25px 10px;
+}
+
+.headlineDetails .gatsby-image-wrapper{
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.headlineDetails img{
+    border-radius: 100%;
+    margin: 0;
+}
+
+.headlineDescription {
+  display: block;
+  margin: 10px 10px;
+}
+
+#continueLink{
+    color: white;
+}
+
+#arrow{
+    margin-left: 4px;
+}
+
+#continueLink:hover{
+    /* opacity: 60%; */
+    color: green; 
+}
+#arrow:hover{
+    color: green;
+    
 }

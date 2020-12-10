@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@iconify/icons-bi": "^1.1.0",
+    "@iconify/react": "^1.1.3",
     "@material-ui/core": "^4.11.1",
     "bootstrap": "^4.5.3",
     "gatsby": "^2.24.85",

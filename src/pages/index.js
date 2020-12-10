@@ -4,7 +4,6 @@ import Blogpost from "../components/Blogpost"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Col, Row} from 'reactstrap';
-import Gallery from "../components/gallery"
 import PaginationLinks from '../components/PaginationLinks'
 import Headline from "../components/Headline"
 
@@ -49,10 +48,17 @@ export const indexQuery = graphql`
             title
             description
             author
+            authorImage{
+              childImageSharp{
+                fluid(quality:100){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             tags
             featuredImage{
               childImageSharp{
-                fluid(quality: 100, fit: COVER){
+                fluid(quality: 100){
                   ...GatsbyImageSharpFluid
                 }
               }
