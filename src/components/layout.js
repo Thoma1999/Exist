@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <Container>
+    <Container style ={{padding:0}}>
       <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="container" id="content">
         {children}

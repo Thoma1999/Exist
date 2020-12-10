@@ -13,25 +13,23 @@
 
 .headlineImage{
     width: 100%;
-    min-height: 55vh;
-    max-height: 70vh;
 }
 
 #headlineTitle{
     margin-left: 10px;
     font-weight: 600;
+    font-size: 1.9em;
 }
 
 .black-overlay{
     display: flex;
     background-color: rgba(0, 0, 0, 0.6);
-    min-height: 55vh;
-    max-height: 70vh;
     height: 100%;
 }
 .content-box{
     color: white;
     padding: 15px 15px;
+    margin-right: 120px;
 }
 
 .headlineDetails {
@@ -42,6 +40,7 @@
 .headlineDetails .gatsby-image-wrapper{
     height: 50px;
     width: 50px;
+    margin-top: 5px;
     margin-right: 20px;
 }
 
@@ -64,10 +63,32 @@
 }
 
 #continueLink:hover{
-    /* opacity: 60%; */
-    color: green; 
+    opacity: 60%;
 }
-#arrow:hover{
-    color: green;
-    
+
+
+@media only screen and (max-width: 767px) {
+    #headlineTitle{
+        font-size: 1.7em;
+    }
+    .headlineDescription p{
+        font-size: 0.9em;
+    }
+    .authorDate h6{
+        font-size: 1em;
+    }
+    .headlineTags h3{
+        font-size: 1.3em;
+    }
+    .content-box{
+       margin-right: 0;
+    }
+    .headlineDetails{
+        margin: 20px 15px;
+    }
+ 
 }
+
+
+
+
